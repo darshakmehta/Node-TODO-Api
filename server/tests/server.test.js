@@ -177,6 +177,7 @@ describe('PATCH /todos/:id', () => {
                 expect(res.body.todo.completedAt).toNotExist();
             })
             .end(done);
-
     });
+
+    //TODO: Test cases for invalid object for PATCH
 });

@@ -1,3 +1,6 @@
+var env = process.env.NODE_ENV;
+
+
 const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -55,7 +58,7 @@ app.delete('/todos/:id', (req, res) => {
         if(!doc) {
             return res.status(404).send();
         }
-        res.send({todo});
+        res.send({doc});
     }).catch((e) =>{
         res.status(400).send();
     });
